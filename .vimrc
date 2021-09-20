@@ -63,4 +63,9 @@ inoremap ? ?<c-g>u
 nnoremap <C-u> <C-o>:UndotreeToggle<CR>
 inoremap <C-u> <C-o>:UndotreeToggle<CR>
 
+"Tab Navigation
+nnoremap <Leader><Up> :tabnew<CR>
+nnoremap <Leader><Right> :tabnext<CR>
+nnoremap <Leader><Left> :tabprevious<CR>
+nnoremap <Leader><Down> :tabclose<CR>
 
