@@ -20,6 +20,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'ycm-core/YouCompleteMe'   " Too Complicated, harus Python Cmake, dkk nya
+Plug 'mbbill/undotree'
 call plug#end()
 
 colorscheme dracula
@@ -59,5 +60,7 @@ inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
+nnoremap <C-u> <C-o>:UndotreeToggle<CR>
+inoremap <C-u> <C-o>:UndotreeToggle<CR>
 
 
