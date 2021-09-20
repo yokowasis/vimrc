@@ -37,3 +37,10 @@ if !has('gui_running')
 endif
 
 let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-markdown-preview-enhanced','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview']
+
+"Remap Multi Cursor VIM ----------------------------
+let g:VM_maps = {}
+let g:VM_maps['Find Under'] = ''
+let g:VM_maps['Find Subword Under'] = ''   
+xmap <C-d> <Plug>(VM-Find-Subword-Under)
+nmap <C-d> <Plug>(VM-Find-Under)
