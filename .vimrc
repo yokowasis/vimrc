@@ -1,4 +1,6 @@
 set encoding=UTF-8
+syntax on
+
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mileszs/ack.vim'
@@ -19,6 +21,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dbeniamine/cheat.sh-vim'
 "Plug 'ycm-core/YouCompleteMe'   " Too Complicated, harus Python Cmake, dkk nya
 Plug 'mbbill/undotree'
 call plug#end()
@@ -69,4 +72,11 @@ nnoremap <Leader><Right> :tabnext<CR>
 nnoremap <Leader><Left> :tabprevious<CR>
 nnoremap <Leader><Down> :tabclose<CR>
 
+"Cheat SH
+let g:syntastic_javascript_checkers = [ 'jshint' ]
 
+
+"Git Quick Commit
+nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'Message of the commit'"
+nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gl :Git log<CR>
