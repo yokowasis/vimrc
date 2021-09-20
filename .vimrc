@@ -69,3 +69,4 @@ nnoremap <Leader><Right> :tabnext<CR>
 nnoremap <Leader><Left> :tabprevious<CR>
 nnoremap <Leader><Down> :tabclose<CR>
 
+
