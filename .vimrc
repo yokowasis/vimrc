@@ -44,3 +44,7 @@ let g:VM_maps['Find Under'] = ''
 let g:VM_maps['Find Subword Under'] = ''   
 xmap <C-d> <Plug>(VM-Find-Subword-Under)
 nmap <C-d> <Plug>(VM-Find-Under)
+
+"Remap Change Language
+map <C-l> <C-o>:setf 
+
