@@ -19,6 +19,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'ycm-core/YouCompleteMe'   " Too Complicated, harus Python Cmake, dkk nya
 call plug#end()
 
 colorscheme dracula
@@ -47,4 +48,16 @@ nmap <C-d> <Plug>(VM-Find-Under)
 
 "Remap Change Language
 map <C-l> <C-o>:setf 
+
+"Keep it Centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+set hls
+
+"Undo Break Points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
 
