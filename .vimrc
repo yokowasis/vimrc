@@ -30,3 +30,10 @@ set expandtab
 let mapleader = " "
 inoremap <C-b> <C-o>:NERDTreeToggle<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>i
+set vb t_vb=
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-markdown-preview-enhanced','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview']
