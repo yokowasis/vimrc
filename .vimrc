@@ -77,6 +77,6 @@ let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 
 "Git Quick Commit
-nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'Message of the commit'"
+nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'msg'"
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git log<CR>
