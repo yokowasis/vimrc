@@ -7,3 +7,15 @@ snippet promisenew
 snippet replaceall
 	${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');
 
+snippet forof
+	for (const ${1:iterator} of ${2:object}) {
+		$3
+	}
+
+snippet forin
+	for (const ${1:key} in ${2:object}) {
+		if (Object.hasOwnProperty.call(object, key)) {
+			const element = ${2:object}[${1:key}];
+			$3
+		}
+	}
