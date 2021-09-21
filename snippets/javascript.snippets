@@ -14,7 +14,7 @@ snippet forof
 
 snippet forin
 	for (const ${1:key} in ${2:object}) {
-		if (Object.hasOwnProperty.call(object, key)) {
+		if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {
 			const element = ${2:object}[${1:key}];
 			$3
 		}

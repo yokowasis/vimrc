@@ -1,10 +1,12 @@
 set encoding=UTF-8
 syntax on
 set shortmess=a
+set nowrap
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 call plug#begin('~/.vim/plugged')
+Plug 'brooth/far.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -31,8 +33,11 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
 Plug 'szw/vim-maximizer'
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 call plug#end()
+
+let g:material_theme_style = 'darker-community'
 
 colorscheme dracula
 let g:snipMate = { 'snippet_version' : 1 }
@@ -86,7 +91,7 @@ let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 "Git Quick Commit
 nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'msg'"
-nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gp :Gpush<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Git log<CR>
 
