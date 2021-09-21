@@ -16,5 +16,5 @@ ln -s vimrc/snipppets .vim/
 ```
 
 ## Fonts
-[Fira Code Patched Fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Medium/complete/Fira%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.ttf);
+[Fira Code Patched Fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Medium/complete/Fira%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.ttf)
 
