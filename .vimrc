@@ -1,5 +1,8 @@
 set encoding=UTF-8
 syntax on
+set shortmess=a
+
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -84,4 +87,7 @@ let g:syntastic_javascript_checkers = [ 'jshint' ]
 "Git Quick Commit
 nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'msg'"
 nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Git log<CR>
+
+
