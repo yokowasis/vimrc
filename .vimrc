@@ -24,6 +24,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'dbeniamine/cheat.sh-vim'
 "Plug 'ycm-core/YouCompleteMe'   " Too Complicated, harus Python Cmake, dkk nya
 Plug 'mbbill/undotree'
+Plug 'gruvbox-community/gruvbox'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'yuezk/vim-js'
 call plug#end()
 
 colorscheme dracula
