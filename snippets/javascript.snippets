@@ -1,0 +1,9 @@
+snippet promisenew
+	return new Promise((r,j)=>{
+		$0
+		r("OK");
+	})
+
+snippet replaceall
+	${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');
+

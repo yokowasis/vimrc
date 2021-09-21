@@ -27,6 +27,8 @@ Plug 'mbbill/undotree'
 Plug 'gruvbox-community/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
+Plug 'szw/vim-maximizer'
+Plug 'puremourning/vimspector'
 call plug#end()
 
 colorscheme dracula
