@@ -4,6 +4,7 @@ set shortmess=a
 set nowrap
 set ignorecase
 set smartcase
+set laststatus=2
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
