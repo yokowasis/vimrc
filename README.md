@@ -7,9 +7,11 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 
 ## Symbolic Link
-run bash as Administrator
+run bash as Administrator / root
 ```sh
+# Only on Windows
 export MSYS=winsymlinks:nativestrict
+# All OS
 cd
 ln -s vimrc/.vimrc ./
 ln -s vimrc/snipppets .vim/
