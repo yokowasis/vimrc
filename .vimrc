@@ -103,3 +103,4 @@ nnoremap <Leader>gl :Git log<CR>
 "MISC
 nmap <leader><leader> :redraw!<CR>
 nmap mm :call ToggleMaximizeCurrentWindow()<CR>
+nmap <leader>` :terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
