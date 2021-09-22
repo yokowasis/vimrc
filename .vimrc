@@ -2,6 +2,8 @@ set encoding=UTF-8
 syntax on
 set shortmess=a
 set nowrap
+set ignorecase
+set smartcase
 
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
