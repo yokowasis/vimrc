@@ -36,6 +36,7 @@ Plug 'yuezk/vim-js'
 Plug 'szw/vim-maximizer'
 "Plug 'puremourning/vimspector'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'pmalek/toogle-maximize.vim'
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
@@ -96,4 +97,6 @@ nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Git log<CR>
 
-
+"MISC
+nmap <leader><leader> :redraw!<CR>
+nmap mm :call ToggleMaximizeCurrentWindow()<CR>
