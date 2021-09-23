@@ -5,11 +5,15 @@ set nowrap
 set ignorecase
 set smartcase
 set laststatus=2
+set updatetime=100
 
 let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_clear_cache_on_exit = 0
 
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/vim-gitbranch'
+Plug 'airblade/vim-gitgutter'
+Plug 'rbong/vim-flog'
 Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'brooth/far.vim'
@@ -39,7 +43,6 @@ Plug 'mbbill/undotree'
 Plug 'gruvbox-community/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
-Plug 'szw/vim-maximizer'
 "Plug 'puremourning/vimspector'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'pmalek/toogle-maximize.vim'
@@ -97,16 +100,31 @@ nnoremap <Leader><Down> :tabclose<CR>
 let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 
-"Git Quick Commit
+"Git Mapping
 nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'msg'"
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gd :Git diff<CR>
-nnoremap <Leader>gl :Git log<CR>
+nnoremap <Leader>gl :Flogsplit<CR>
 
 "MISC
 nmap <leader><leader> :redraw!<CR>
 nmap mm :call ToggleMaximizeCurrentWindow()<CR>
 nmap <leader>` :terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 
-"KEYBOARD INSERT SELECT
-
+"Light Line Custom
+let g:lightline = {
+            \ 'colorscheme': 'powerline',
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'gitbranch', 'readonly', 'filename', 'shortcut' ] ],
+            \   'right': [ [ 'lineinfo' ],
+            \              [ 'filetype' ],[ 'shortcur' ] ]
+            \ },
+            \ 'component': {
+            \   'shortcut': 'Hotkey=>g:GIT,`:Terminal,KB:Cheat.sh',
+            \   'shortcur': 'Commands:Far',
+            \ },
+            \ 'component_function' : {
+            \   'gitbranch': 'gitbranch#name'
+            \ }
+            \ }
