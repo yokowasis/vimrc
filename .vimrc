@@ -101,8 +101,10 @@ let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 
 "Git Mapping
+nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
+nnoremap <Leader>gg :vertical Git<CR>45<C-w><<C-w><C-w>
 nnoremap <Leader>gc :execute "Git add . \| Git commit -m 'msg'"
-nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gp :vertical Git push<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Flogsplit<CR>
 
