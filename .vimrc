@@ -6,7 +6,8 @@ set ignorecase
 set smartcase
 set laststatus=2
 
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_clear_cache_on_exit = 0
 
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
