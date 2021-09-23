@@ -10,6 +10,7 @@ let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dis
 let g:ctrlp_clear_cache_on_exit = 0
 
 call plug#begin('~/.vim/plugged')
+Plug 'dNitro/vim-pug-complete', { 'for': ['jade', 'pug'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'brooth/far.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -20,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'digitaltoad/vim-pug'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
@@ -105,3 +107,6 @@ nnoremap <Leader>gl :Git log<CR>
 nmap <leader><leader> :redraw!<CR>
 nmap mm :call ToggleMaximizeCurrentWindow()<CR>
 nmap <leader>` :terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+
+"KEYBOARD INSERT SELECT
+
