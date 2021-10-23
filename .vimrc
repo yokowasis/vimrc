@@ -6,6 +6,7 @@ set ignorecase
 set smartcase
 set laststatus=2
 set updatetime=100
+set noswapfile
 
 let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_clear_cache_on_exit = 0
