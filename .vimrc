@@ -1,4 +1,3 @@
-set encoding=UTF-8
 syntax on
 set shortmess=a
 set nowrap
@@ -66,7 +65,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-markdown-preview-enhanced','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview']
+let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview']
 
 "Remap Multi Cursor VIM ----------------------------
 let g:VM_maps = {}
