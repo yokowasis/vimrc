@@ -35,7 +35,6 @@ Plug 'digitaltoad/vim-pug'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
 "endsnipmate
 "
 "Plug 'hrsh7th/vim-vsnip'
