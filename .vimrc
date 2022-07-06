@@ -7,6 +7,12 @@ set laststatus=2
 set updatetime=100
 set noswapfile
 
+"Auto open nerdTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufWinEnter * NERDTreeMirror
+
 let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_clear_cache_on_exit = 0
 
@@ -126,8 +132,11 @@ nnoremap <Leader>gl :Flogsplit<CR>
 
 "MISC
 nmap <leader><leader> :redraw!<CR>
-nmap mm :call ToggleMaximizeCurrentWindow()<CR>
 nmap <leader>` :terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+
+"RESIZE WINDOW
+nnoremap . :vertical resize -10<CR>
+nnoremap , :vertical resize +5<CR>
 
 "Light Line Custom
 let g:lightline = {
