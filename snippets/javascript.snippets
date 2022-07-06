@@ -1,24 +1,75 @@
-snippet promisenew
-	return new Promise((r,j)=>{
-		$0
-		r("OK");
-	})
+snippet cl
+	console.${2:log}(`${1:something}`);
 
 snippet replaceall
 	${1:str} = ${1:str}.replace(/${2:find}/g, '${3:replace}');
 
+snippet jqr
+	(function( \$ ) {
+		${1}
+	})( jQuery );
+
+snippet alertyesno
+	var txt;
+	var r = confirm("Press a button!");
+	if (r == true) {
+		txt = "You pressed OK!";
+	} else {
+		txt = "You pressed Cancel!";
+	}
+
+snippet fetch
+	fetch("https://bot.bimasoft.web.id:4020/getip",{
+		method: "GET",
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+	})
+	.then(res => res.json())
+	.then(result => {
+		${1:console.log (result)}
+	})
+	.cath(err=>{
+		${2:console.log (err)}
+	})
+
+snippet preact
+	const ${1:Component} = (props) => {
+		return html``;
+	}
+	export default ${1:Component}
+
+snippet preactRouter
+	<\${Router} history=\${createHashHistory()} >
+		<\${Login} path="/" />
+		<\${AsyncRoute} path="/dashboard" getComponent=\${()=>import("../Pages/Dashboard.js").then(module=>module.default)} />
+	<//>
+
+snippet promisenew
+	return new Promise(async (resolve, reject) => {
+		if ("OK") {
+			resolve ("OK")
+		} else {
+			reject ("ERROR");
+		}
+	});
+
 snippet forof
 	for (const ${1:iterator} of ${2:object}) {
-		$3
+		
 	}
-
+	
 snippet forin
 	for (const ${1:key} in ${2:object}) {
-		if (Object.hasOwnProperty.call(${2:object}, ${1:key})) {
+		if (Object.prototype.hasOwnProperty.call(${2:object}, ${1:key})) {
 			const element = ${2:object}[${1:key}];
-			$3
+			
 		}
 	}
-snippet lg
-	console.log(${1:something});
+	
 
+snippet for
+	for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {
+		const element = ${2:array}[${1:index}];
+	}

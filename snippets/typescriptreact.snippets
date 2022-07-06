@@ -1,0 +1,19 @@
+snippet next
+	import type { NextPage } from 'next'
+	const Page: NextPage<{someProps : string}> = (props) => {
+		return(
+			<>
+				
+			</>
+		)
+	}
+
+	export default Page
+
+snippet ssr
+	export async function getServerSideProps() {
+		return { props: { data : {} } }
+	}
+
+
+

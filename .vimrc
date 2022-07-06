@@ -24,11 +24,17 @@ Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'digitaltoad/vim-pug'
+"snipmate
+Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+"endsnipmate
+"
+"Plug 'hrsh7th/vim-vsnip'
+"Plug 'hrsh7th/vim-vsnip-integ'
+"
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-fugitive'
@@ -46,9 +52,19 @@ Plug 'yuezk/vim-js'
 "Plug 'puremourning/vimspector'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'pmalek/toogle-maximize.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
+
+"Snipmate Scope
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['javascriptreact'] = 'javascript,javascriptreact'
+let g:snipMate.scope_aliases['typescript'] = 'javascript,typescript'
+let g:snipMate.scope_aliases['typescriptreact'] = 'javascriptreact,typescriptreact'
+
 
 colorscheme dracula
 let g:snipMate = { 'snippet_version' : 1 }
