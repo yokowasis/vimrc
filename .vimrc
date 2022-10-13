@@ -17,6 +17,7 @@ let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dis
 let g:ctrlp_clear_cache_on_exit = 0
 
 call plug#begin('~/.vim/plugged')
+Plug 'mattn/emmet-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 Plug 'rbong/vim-flog'
