@@ -71,12 +71,16 @@ let g:snipMate.scope_aliases['javascriptreact'] = 'javascript,javascriptreact'
 let g:snipMate.scope_aliases['typescript'] = 'javascript,typescript'
 let g:snipMate.scope_aliases['typescriptreact'] = 'javascriptreact,typescriptreact'
 
+"Change Snipmate Default Tab because conflict with copilot and coc
+"autocomplete
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 colorscheme dracula
 let g:snipMate = { 'snippet_version' : 1 }
 set number
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 let mapleader = " "
 inoremap <C-b> <C-o>:NERDTreeToggle<CR>
@@ -87,7 +91,19 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview']
+let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview', 'coc-prettier']
+
+"COC Trigger with tab and return
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-@> coc#refresh()
+
+"Emmet Control A
+imap <C-A> <Plug>(emmet-expand-abbr)
+
+"COC Prettier
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 "Remap Multi Cursor VIM ----------------------------
 let g:VM_maps = {}
@@ -131,7 +147,6 @@ nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Flogsplit<CR>
 
 "MISC
-nmap <leader><leader> :redraw!<CR>
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 
 "RESIZE WINDOW
@@ -148,7 +163,7 @@ let g:lightline = {
             \              [ 'filetype' ],[ 'shortcur' ] ]
             \ },
             \ 'component': {
-            \   'shortcut': 'Hotkey=>g:GIT,`:Terminal,KB:Cheat.sh',
+            \   'shortcut': 'Hotkey=>g:GIT,`:Term,KB:Cheat.sh,^a,:Emmet,^j:Snipmate',
             \   'shortcur': 'Commands:Far',
             \ },
             \ 'component_function' : {
