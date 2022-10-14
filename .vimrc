@@ -78,7 +78,8 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 
 colorscheme dracula
 let g:snipMate = { 'snippet_version' : 1 }
-set number
+set number relativenumber
+set nu rnu
 set tabstop=2
 set shiftwidth=2
 set expandtab
