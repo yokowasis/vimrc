@@ -132,7 +132,7 @@ nnoremap <Leader>gl :Flogsplit<CR>
 
 "MISC
 nmap <leader><leader> :redraw!<CR>
-nmap <leader>` :terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 
 "RESIZE WINDOW
 nnoremap . :vertical resize -10<CR>
