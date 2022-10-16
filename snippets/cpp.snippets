@@ -1,0 +1,21 @@
+snippet class
+	class SomeClass {
+	  public:
+		  int someVar;
+			int anotherVar;
+			
+			int someMethod(int a, int b) {
+				return a + b;
+			}
+
+			//constuctor
+			SomeClass() {
+			  //doing some init
+			}
+
+			//initialization
+			SomeClass(int someVar, int anotherVar) {
+			  this->someVar = someVar;
+				this->anotherVar = anotherVar;
+			}
+	};

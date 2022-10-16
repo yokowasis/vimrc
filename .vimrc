@@ -153,6 +153,8 @@ nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 "RESIZE WINDOW
 nnoremap . :vertical resize -10<CR>
 nnoremap , :vertical resize +5<CR>
+nnoremap ' :horizontal resize -5<CR>
+nnoremap ; :horizontal resize +2<CR>
 
 "Light Line Custom
 let g:lightline = {
