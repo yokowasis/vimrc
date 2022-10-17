@@ -100,6 +100,9 @@ inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
 
+"COC Paramter Hint
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
+
 "Emmet Control A
 imap <C-A> <Plug>(emmet-expand-abbr)
 
@@ -153,6 +156,7 @@ nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 "Copy Paste from OS Clipboard
 vnoremap <C-c> "+y
 nnoremap <C-v> "+p
+inoremap <C-v> <C-o>"+p
 
 "RESIZE WINDOW
 nnoremap . :vertical resize -10<CR>
