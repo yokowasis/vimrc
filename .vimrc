@@ -147,8 +147,12 @@ nnoremap <Leader>gp :vertical Git push<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Flogsplit<CR>
 
-"MISC
+"TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+
+"Copy Paste from OS Clipboard
+vnoremap <C-c> "+y
+nnoremap <C-v> "+p
 
 "RESIZE WINDOW
 nnoremap . :vertical resize -10<CR>
