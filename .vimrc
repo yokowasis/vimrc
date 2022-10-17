@@ -100,8 +100,8 @@ inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
 
-"COC Paramter Hint
-nnoremap <silent> <leader>h :call CocActionAsync('doHover')<cr>
+"COC Paramter Hint <Space + Z>
+nnoremap <silent> <leader>z :call CocActionAsync('doHover')<cr>
 
 "Emmet Control A
 imap <C-A> <Plug>(emmet-expand-abbr)
