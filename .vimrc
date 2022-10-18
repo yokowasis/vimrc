@@ -65,11 +65,12 @@ call plug#end()
 let g:material_theme_style = 'darker-community'
 
 "Snipmate Scope
-let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['javascriptreact'] = 'javascript,javascriptreact'
-let g:snipMate.scope_aliases['typescript'] = 'javascript,typescript'
-let g:snipMate.scope_aliases['typescriptreact'] = 'javascriptreact,typescriptreact'
+"Deprecated
+"let g:snipMate = get(g:, 'snipMate', {})  "Allow for vimrc re-sourcing
+"let g:snipMate.scope_aliases = {}
+"let g:snipMate.scope_aliases['javascriptreact'] = 'javascript,javascriptreact'
+"let g:snipMate.scope_aliases['typescript'] = 'javascript,typescript'
+"let g:snipMate.scope_aliases['typescriptreact'] = 'javascriptreact,typescriptreact'
 
 "Change Snipmate Default Tab because conflict with copilot and coc
 "autocomplete
