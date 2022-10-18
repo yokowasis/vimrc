@@ -150,6 +150,13 @@ nnoremap <Leader>gp :vertical Git push<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gl :Flogsplit<CR>
 
+"Shortcut
+"===========================
+
+"Ctrl+S to save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
+
 "TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
 
