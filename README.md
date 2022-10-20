@@ -19,6 +19,7 @@ ln -s vimrc/snipppets .vim/
 
 ## Vim to Neovim
 ```
+touch ~/.config/nvim/init.vim
 nvim ~/.config/nvim/init.vim
 ```
 paste this line
