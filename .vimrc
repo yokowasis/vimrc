@@ -7,6 +7,8 @@ set laststatus=2
 set updatetime=100
 set noswapfile
 
+"Prettier on save
+autocmd BufWritePost * :Prettier
 "Auto open nerdTree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
