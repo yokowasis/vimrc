@@ -17,6 +17,20 @@ ln -s vimrc/.vimrc ./
 ln -s vimrc/snipppets .vim/
 ```
 
+## Vim to Neovim
+```
+mkdir ~/.config
+mkdir ~/.config/nvim
+touch ~/.config/nvim/init.vim
+nvim ~/.config/nvim/init.vim
+```
+paste this line
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+```
+
 ## Fonts
 [Fira Code Patched Fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Medium/complete/Fira%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.ttf)
 
