@@ -99,7 +99,7 @@ let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-
 
 "COC Trigger with tab and return
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
 
