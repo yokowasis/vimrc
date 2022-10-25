@@ -175,6 +175,7 @@ inoremap <C-s> <C-o>:w<CR><CR>
 
 "TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+tnoremap <silent><leader>` <C-\><C-n>:q<CR>
 tnoremap <C-w> <C-\><C-n><C-w><C-w>
 tnoremap <Esc> <C-\><C-n>
 
