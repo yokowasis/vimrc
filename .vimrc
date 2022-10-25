@@ -145,7 +145,17 @@ nnoremap <Leader><Down> :tabclose<CR>
 let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 "Compile and run C++
-nnoremap <Leader>cc :w<CR>:!export PATH=$PATH:$(pwd) && g++ % -o a.exe && a.exe<CR>
+"Define a global variable containing the current environment's name
+"if it hasn't been already defined.
+if !exists('g:env')
+    if has('win64') || has('win32') || has('win16')
+        let g:env = 'WINDOWS'
+    else
+        let g:env = toupper(substitute(system('uname'), '\n', '', ''))
+    endif
+endif
+
+nnoremap <leader>cc :execute g:env == "WINDOWS" ? "!g++ % -o a.exe && a.exe" : "!g++ % -o a.out && ./a.out "<CR>
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
