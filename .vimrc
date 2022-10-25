@@ -156,7 +156,7 @@ if !exists('g:env')
     endif
 endif
 
-nnoremap <leader>cc :execute g:env == "WINDOWS" ? "!g++ % -o a.exe && a.exe" : "!g++ % -o a.out && ./a.out "<CR>
+nnoremap <leader>cc :execute g:env == "WINDOWS" ? "!g++ % -o %:r.exe && %:r.exe" : "!g++ % -o %:r.out && ./%:r.out "<CR>
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
