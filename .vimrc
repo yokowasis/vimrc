@@ -145,7 +145,7 @@ nnoremap <Leader><Down> :tabclose<CR>
 let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 "Compile and run C++
-nnoremap <Leader>cc :w<CR>:!g++ % <CR>:!./a.out<CR>:!a.exe<CR>
+nnoremap <Leader>cc :w<CR>:silent exec "!export PATH=$PATH:$(pwd)"<CR>:!g++ % -o a.exe && a.exe<CR>
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
