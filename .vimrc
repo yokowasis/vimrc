@@ -145,7 +145,7 @@ nnoremap <Leader><Down> :tabclose<CR>
 let g:syntastic_javascript_checkers = [ 'jshint' ]
 
 "Compile and run C++
-nnoremap <Leader>cc :w<CR>:silent exec "!export PATH=$PATH:$(pwd)"<CR>:!g++ % -o a.exe && a.exe<CR>
+nnoremap <Leader>cc :w<CR>:!export PATH=$PATH:$(pwd) && g++ % -o a.exe && a.exe<CR>
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
@@ -159,8 +159,8 @@ nnoremap <Leader>gl :Flogsplit<CR>
 "===========================
 
 "Ctrl+S to save
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <C-o>:w<CR>
+nnoremap <C-s> :w<CR><CR>
+inoremap <C-s> <C-o>:w<CR><CR>
 
 "TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
