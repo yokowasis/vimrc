@@ -168,10 +168,14 @@ nnoremap <Leader>gl :Flogsplit<CR>
 
 "Shortcut
 "===========================
+"
+
+"Toggle Wrap
+nnoremap <Leader>w :set wrap!<CR><CR>
 
 "Ctrl+S to save
-nnoremap <C-s> :w<CR><CR>
-inoremap <C-s> <C-o>:w<CR><CR>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
 
 "TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
