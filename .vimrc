@@ -7,6 +7,7 @@ set laststatus=2
 set updatetime=100
 set noswapfile
 set shortmess+=T
+set cmdheight=2
 
 "Prettier on save
 autocmd BufWritePost * :Prettier
