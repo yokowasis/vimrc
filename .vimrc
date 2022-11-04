@@ -1,5 +1,5 @@
 set syntax=on
-set shortmess=a
+set shortmess=atWI
 set nowrap
 set ignorecase
 set smartcase
@@ -7,7 +7,7 @@ set laststatus=2
 set updatetime=100
 set noswapfile
 set shortmess+=T
-set cmdheight=2
+set cmdheight=1
 
 "Prettier on save
 autocmd BufWritePost * :Prettier
