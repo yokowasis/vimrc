@@ -159,9 +159,9 @@ endif
 
 nnoremap <leader>cc :execute 
                       \ &filetype == "javascript" ? "!node %" : 
-                      \ &filetype == "sh" ? "!bash %" : 
-                      \ &filetype == "cpp" ? g:env == "WINDOWS" ? "!g++ % -o %:r.exe && %:r.exe" : "!g++ % -o %:r.out && ./%:r.out " :
                       \ &filetype == "typescript" ? "!ts-node %" : 
+                      \ &filetype == "cpp" ? g:env == "WINDOWS" ? "!g++ % -o %:r.exe && %:r.exe" : "!g++ % -o %:r.out && ./%:r.out " :
+                      \ &filetype == "sh" ? "!bash %" : 
                       \ ":echo 'file not recognized'" <CR>
 
 "Git Mapping
