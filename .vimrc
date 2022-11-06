@@ -195,10 +195,10 @@ nnoremap <C-v> "+p
 inoremap <C-v> <C-o>"+p
 
 "RESIZE WINDOW
-nnoremap . :vertical resize -10<CR>
-nnoremap , :vertical resize +5<CR>
-nnoremap ' :horizontal resize -5<CR>
-nnoremap ; :horizontal resize +2<CR>
+nnoremap <C-w>. :vertical resize -10<CR>
+nnoremap <C-w>, :vertical resize +5<CR>
+nnoremap <C-w>' :horizontal resize -5<CR>
+nnoremap <C-w>; :horizontal resize +2<CR>
 
 "Light Line Custom
 let g:lightline = {
