@@ -162,7 +162,7 @@ nnoremap <leader>cc :set cmdheight=5<CR><C-w><C-s><C-w><Down>:execute
                       \ &filetype == "typescript" ? "!ts-node %" : 
                       \ &filetype == "cpp" ? g:env == "WINDOWS" ? "terminal! g++ % -o %:r.exe && %:r.exe" : "terminal! g++ % -o %:r.out && ./%:r.out " :
                       \ &filetype == "sh" ? "terminal! bash %" : 
-                      \ ":echo 'file not recognized'" <CR>:set cmdheight=1<CR>i
+                      \ ":echo 'file not recognized'" <CR>:set cmdheight=1<CR>
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
