@@ -157,12 +157,12 @@ if !exists('g:env')
     endif
 endif
 
-nnoremap <leader>cc :execute 
+nnoremap <leader>cc :set cmdheight=5<CR><C-w><C-s><C-w><Down>:execute 
                       \ &filetype == "javascript" ? "!node %" : 
                       \ &filetype == "typescript" ? "!ts-node %" : 
-                      \ &filetype == "cpp" ? g:env == "WINDOWS" ? "!g++ % -o %:r.exe && %:r.exe" : "!g++ % -o %:r.out && ./%:r.out " :
-                      \ &filetype == "sh" ? "!bash %" : 
-                      \ ":echo 'file not recognized'" <CR>
+                      \ &filetype == "cpp" ? g:env == "WINDOWS" ? "terminal! g++ % -o %:r.exe && %:r.exe" : "terminal! g++ % -o %:r.out && ./%:r.out " :
+                      \ &filetype == "sh" ? "terminal! bash %" : 
+                      \ ":echo 'file not recognized'" <CR>:set cmdheight=1<CR>i
 
 "Git Mapping
 nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
