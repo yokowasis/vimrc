@@ -106,6 +106,9 @@ inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
 
+"Find and Replace
+nnoremap <leader>f  :F something src/**/*.*<left><left><left><left><left><left><left><left><left><left><left>
+
 "COC Paramter Hint <Space + Z>
 nnoremap <silent> <leader>z :call CocActionAsync('doHover')<cr>
 
