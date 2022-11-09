@@ -64,6 +64,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'pmalek/toogle-maximize.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
@@ -89,8 +90,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 let mapleader = " "
-inoremap <C-b> <C-o>:NERDTreeToggle<CR>
-nnoremap <C-b> :NERDTreeToggle<CR>i
+inoremap <C-b> <C-o>:NERDTreeToggle<CR><C-w><C-w>
+nnoremap <C-b> :NERDTreeToggle<CR><C-w><C-w>
 set vb t_vb=
 
 if !has('gui_running')
