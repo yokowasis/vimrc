@@ -21,6 +21,7 @@ let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dis
 let g:ctrlp_clear_cache_on_exit = 0
 
 call plug#begin('~/.vim/plugged')
+Plug 'lervag/vimtex'
 Plug 'mattn/emmet-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
@@ -98,7 +99,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview', 'coc-prettier']
+let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview', 'coc-prettier', 'coc-vimtex']
 
 "COC Trigger with tab and return
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
