@@ -185,8 +185,8 @@ nnoremap <Leader>gl :Flogsplit<CR>
 nnoremap <Leader>w :set wrap!<CR><CR>
 
 "Ctrl+S to save
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <C-o>:w<CR>
+nnoremap <C-s> :set cmdheight=3<CR>:w<CR>:set cmdheight=1<CR>
+inoremap <C-s> <C-o>:set cmdheight=3<CR><C-o>:w<CR><C-o>:set cmdheight=1<CR>
 
 "TERMINAL
 nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
@@ -205,6 +205,10 @@ nnoremap , :vertical resize +5<CR>
 nnoremap ' :horizontal resize -5<CR>
 nnoremap ; :horizontal resize +2<CR>
 
+"keep visual mode after indent
+vnoremap > >gv
+vnoremap < <gv
+
 "Light Line Custom
 let g:lightline = {
             \ 'colorscheme': 'powerline',
@@ -222,3 +226,5 @@ let g:lightline = {
             \   'gitbranch': 'gitbranch#name'
             \ }
             \ }
+
+
