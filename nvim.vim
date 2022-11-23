@@ -10,7 +10,6 @@ set cmdheight=1
 
 let g:snipMate = { 'snippet_version' : 1 }
 
-
 call plug#begin('~/.vim/plugged')
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
@@ -22,8 +21,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 "endsnipmate
 call plug#end()
-
-
 
 "Tab Navigation
 nnoremap <Leader><Up> <Cmd>enew<CR>
@@ -84,4 +81,5 @@ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 "Emmet Control A
 imap <C-A> <Plug>(emmet-expand-abbr)
 
-
+"Trigger Copilot
+nnoremap <Leader><Enter> :Copilot<CR>
