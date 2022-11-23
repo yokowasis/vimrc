@@ -11,6 +11,7 @@ set cmdheight=1
 
 "Prettier on save
 autocmd BufWritePost * :Prettier
+autocmd VimEnter * TSEnable highlight
 "Auto open nerdTree
 "autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
@@ -67,6 +68,7 @@ Plug 'pmalek/toogle-maximize.vim'
 "Plug 'HerringtonDarkholme/yats.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'easymotion/vim-easymotion'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
