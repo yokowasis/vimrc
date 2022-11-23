@@ -11,6 +11,26 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ## Configuration
 
+### Symbolic Link for Snippet
+run bash as Administrator / root
+
+#### Windows
+```sh
+export MSYS=winsymlinks:nativestrict
+cd ~/AppData/Local/nvim/
+ln -s ~/vimrc/snippets/ ./
+echo "vim.cmd('source ~/vimrc/plug.vim')" >> init.lua
+echo "vim.cmd('source ~/vimrc/nvim.vim')" >> init.lua
+```
+
+#### Linux and MacOS
+```sh
+cd .config/nvim
+ln -s ~/vimrc/snippets/ ./
+echo "vim.cmd('source ~/vimrc/plug.vim')" >> init.lua
+echo "vim.cmd('source ~/vimrc/nvim.vim')" >> init.lua
+```
+
 ### Linux / MacOS (Bash)
 ```
 mkdir ~/.config
