@@ -12,6 +12,7 @@ let g:snipMate = { 'snippet_version' : 1 }
 
 
 call plug#begin('~/.vim/plugged')
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'easymotion/vim-easymotion'
 Plug 'lervag/vimtex'
 Plug 'mattn/emmet-vim'
