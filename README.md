@@ -1,4 +1,7 @@
 # Installation
+
+## Install Neovim
+
 ## Install vim-plug
 ```sh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -6,29 +9,23 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ```
 
-## Symbolic Link
-run bash as Administrator / root
-```sh
-# Only on Windows
-export MSYS=winsymlinks:nativestrict
-# All OS
-cd
-ln -s vimrc/.vimrc ./
-ln -s vimrc/snipppets .vim/
-```
+## Configuration
 
-## Vim to Neovim
+### Linux / MacOS (Bash)
 ```
 mkdir ~/.config
 mkdir ~/.config/nvim
-touch ~/.config/nvim/init.vim
-nvim ~/.config/nvim/init.vim
+echo set runtimepath^=~/.vim runtimepath+=~/.vim/after > ~/.config/nvim/init.vim
+echo "let &packpath = &runtimepath" >> ~/.config/nvim/init.vim
+echo source ~/vimrc/.vimrc >> ~/.config/nvim/init.vim
 ```
-paste this line
+
+### Windows (Power Shell)
 ```
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
+mkdir ~\AppData\Local\nvim\
+Set-Content ~\AppData\Local\nvim\init.vim "set runtimepath^=~/.vim runtimepath+=~/.vim/after"
+Add-Content ~\AppData\Local\nvim\init.vim "let &packpath = &runtimepath" 
+Add-Content ~\AppData\Local\nvim\init.vim "source ~/vimrc/.vimrc" 
 ```
 
 ## Fonts
