@@ -25,7 +25,7 @@ echo "vim.cmd('source ~/vimrc/nvim.vim')" >> init.lua
 
 #### Linux and MacOS
 ```sh
-cd .config/nvim
+cd ~/.config/nvim
 ln -s ~/vimrc/snippets/ ./
 echo "vim.cmd('source ~/vimrc/plug.vim')" >> init.lua
 echo "vim.cmd('source ~/vimrc/nvim.vim')" >> init.lua
