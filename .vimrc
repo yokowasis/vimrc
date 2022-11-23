@@ -63,7 +63,8 @@ Plug 'yuezk/vim-js'
 "Plug 'puremourning/vimspector'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'pmalek/toogle-maximize.vim'
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'HerringtonDarkholme/yats.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
@@ -91,8 +92,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 let mapleader = " "
-inoremap <C-b> <C-o>:NERDTreeToggle<CR><C-w><C-w>
-nnoremap <C-b> :NERDTreeToggle<CR><C-w><C-w>
+inoremap <C-b> <C-o>:NERDTreeToggle<CR><C-w><C-w>:NERDTreeFind<CR>
+nnoremap <C-b> :NERDTreeToggle<CR><C-w><C-w>:NERDTreeFind<CR>
 set vb t_vb=
 
 if !has('gui_running')
