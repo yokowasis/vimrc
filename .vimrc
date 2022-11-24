@@ -69,9 +69,24 @@ Plug 'pmalek/toogle-maximize.vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'easymotion/vim-easymotion'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'liuchengxu/vim-which-key'
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
+
+"Tresitter
+autocmd FileType vim :TSDisable highlight
+
+"whichkey
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
+set timeoutlen=300
 
 "Snipmate Scope
 "Deprecated
