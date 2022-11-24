@@ -227,6 +227,10 @@ nnoremap ; :horizontal resize +2<CR>
 vnoremap > >gv
 vnoremap < <gv
 
+"PG UP and Down
+nnoremap F <PageUp>
+nnoremap B <PageDown>
+
 "Light Line Custom
 let g:lightline = {
             \ 'colorscheme': 'powerline',
