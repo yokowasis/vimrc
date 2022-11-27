@@ -121,6 +121,11 @@ inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
 
+"COC Go to definition
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 "Find and Replace
 nnoremap <leader>f  :F something src/**/*.*<left><left><left><left><left><left><left><left><left><left><left>
 
