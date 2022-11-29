@@ -16,6 +16,7 @@ autocmd BufWritePost * :Prettier
 "autocmd VimEnter * wincmd p
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "autocmd BufWinEnter * NERDTreeMirror
+autocmd BufWinEnter * syntax on
 
 let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_clear_cache_on_exit = 0
