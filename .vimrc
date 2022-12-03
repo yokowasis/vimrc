@@ -222,8 +222,10 @@ vnoremap > >gv
 vnoremap < <gv
 
 "PG UP and Down
-nnoremap F <PageUp>
-nnoremap B <PageDown>
+nnoremap F <PageUp>jjjjjjjjkkkkkkkk
+nnoremap B <PageDown>kkkkkkkkjjjjjjjj
+vnoremap F <PageUp>jjjjjjjjkkkkkkkk
+vnoremap B <PageDown>kkkkkkkkjjjjjjjj
 
 "Light Line Custom
 let g:lightline = {
