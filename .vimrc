@@ -74,14 +74,6 @@ call plug#end()
 
 let g:material_theme_style = 'darker-community'
 
-"whichkey
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
 set timeoutlen=300
 
 "Snipmate Scope
@@ -251,5 +243,18 @@ let g:lightline = {
             \ }
             \ }
 
+"Background Transparent
 hi Normal guibg=NONE ctermbg=NONE
 
+"Laguage shortcut
+nnoremap <leader>lp :setfiletype php<CR>
+nnoremap <leader>lh :setfiletype html<CR>
+
+"whichkey
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
