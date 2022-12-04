@@ -8,6 +8,8 @@ set updatetime=100
 set noswapfile
 set shortmess+=T
 set cmdheight=1
+filetype indent on
+set smartindent
 
 "Prettier on save
 autocmd BufWritePost * :Prettier
