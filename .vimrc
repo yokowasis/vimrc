@@ -16,6 +16,7 @@ autocmd BufWritePost * :Prettier
 "autocmd VimEnter * wincmd p
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "autocmd BufWinEnter * NERDTreeMirror
+autocmd BufWinEnter * syntax on
 
 let g:ctrlp_custom_ignore = '\v[\/](wp-admin|wp-includes|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_clear_cache_on_exit = 0
@@ -73,14 +74,6 @@ call plug#end()
 
 let g:material_theme_style = 'darker-community'
 
-"whichkey
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
 set timeoutlen=300
 
 "Snipmate Scope
@@ -120,6 +113,11 @@ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <c-@> coc#refresh()
+
+"COC Go to definition
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 "Find and Replace
 nnoremap <leader>f  :F something src/**/*.*<left><left><left><left><left><left><left><left><left><left><left>
@@ -224,8 +222,10 @@ vnoremap > >gv
 vnoremap < <gv
 
 "PG UP and Down
-nnoremap F <PageUp>
-nnoremap B <PageDown>
+nnoremap F <PageUp>jjjjjjjjkkkkkkkk
+nnoremap B <PageDown>kkkkkkkkjjjjjjjj
+vnoremap F <PageUp>jjjjjjjjkkkkkkkk
+vnoremap B <PageDown>kkkkkkkkjjjjjjjj
 
 "Light Line Custom
 let g:lightline = {
@@ -245,4 +245,18 @@ let g:lightline = {
             \ }
             \ }
 
+"Background Transparent
+hi Normal guibg=NONE ctermbg=NONE
 
+"Laguage shortcut
+nnoremap <leader>lp :setfiletype php<CR>
+nnoremap <leader>lh :setfiletype html<CR>
+
+"whichkey
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
