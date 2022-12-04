@@ -229,6 +229,9 @@ nnoremap B <PageDown>kkkkkkkkjjjjjjjj
 vnoremap F <PageUp>jjjjjjjjkkkkkkkk
 vnoremap B <PageDown>kkkkkkkkjjjjjjjj
 
+"a to insert mode
+nnoremap a i
+
 "Light Line Custom
 let g:lightline = {
             \ 'colorscheme': 'powerline',
