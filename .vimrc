@@ -203,7 +203,8 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <C-o>:w<CR>
 
 "TERMINAL
-nmap <leader>` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+nmap <leader>`` <C-w>v<C-w><C-w>:terminal<CR><C-w>J<C-w>-<C-w>-<C-w>-<C-w>-<C-w>-
+nmap <leader>`v <C-w>v<C-w><C-w>:terminal<CR>
 tnoremap <silent><leader>` <C-\><C-n>:q<CR>
 tnoremap <C-w> <C-\><C-n><C-w><C-w>
 tnoremap <Esc> <C-\><C-n>
@@ -228,9 +229,6 @@ nnoremap F <PageUp>jjjjjjjjkkkkkkkk
 nnoremap B <PageDown>kkkkkkkkjjjjjjjj
 vnoremap F <PageUp>jjjjjjjjkkkkkkkk
 vnoremap B <PageDown>kkkkkkkkjjjjjjjj
-
-"a to insert mode
-nnoremap a i
 
 "Light Line Custom
 let g:lightline = {
@@ -259,9 +257,12 @@ nnoremap <leader>lh :setfiletype html<CR>
 
 "whichkey
 lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+  local wk = require("which-key");
+
+  wk.register({
+    ["<leader>`"] = { name = "+terminal" },
+    ["<leader>``"] = {"Horizontal Terminal"}, 
+    ["<leader>`v"] = {"Vertical Terminal"}, 
+  })
+
 EOF
