@@ -76,14 +76,6 @@ call plug#end()
 
 let g:material_theme_style = 'darker-community'
 
-"whichkey
-lua << EOF
-  require("which-key").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
-EOF
 set timeoutlen=300
 
 "Snipmate Scope
@@ -232,8 +224,10 @@ vnoremap > >gv
 vnoremap < <gv
 
 "PG UP and Down
-nnoremap F <PageUp>
-nnoremap B <PageDown>
+nnoremap F <PageUp>jjjjjjjjkkkkkkkk
+nnoremap B <PageDown>kkkkkkkkjjjjjjjj
+vnoremap F <PageUp>jjjjjjjjkkkkkkkk
+vnoremap B <PageDown>kkkkkkkkjjjjjjjj
 
 "Light Line Custom
 let g:lightline = {
@@ -253,5 +247,18 @@ let g:lightline = {
             \ }
             \ }
 
+"Background Transparent
 hi Normal guibg=NONE ctermbg=NONE
 
+"Laguage shortcut
+nnoremap <leader>lp :setfiletype php<CR>
+nnoremap <leader>lh :setfiletype html<CR>
+
+"whichkey
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
