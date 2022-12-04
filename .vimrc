@@ -140,9 +140,6 @@ let g:VM_maps['Find Subword Under'] = ''
 xmap <C-d> <Plug>(VM-Find-Subword-Under)
 nmap <C-d> <Plug>(VM-Find-Under)
 
-"Remap Change Language
-map <C-l> <C-o>:setf 
-
 "Keep it Centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -184,7 +181,6 @@ nnoremap <leader>cc :set cmdheight=5<CR><C-w><C-s><C-w><Down>:execute
                       \ ":echo 'file not recognized'" <CR>:set cmdheight=1<CR>
 
 "Git Mapping
-nnoremap <Leader>g :vertical Git<CR>45<C-w><<C-w><C-w>
 nnoremap <Leader>gg :vertical Git<CR>45<C-w><<C-w><C-w>
 nnoremap <Leader>gc :execute "Git add . \| Git commit -m ''"<left><left>
 nnoremap <Leader>gp :vertical Git push<CR>
@@ -260,9 +256,13 @@ lua << EOF
   local wk = require("which-key");
 
   wk.register({
-    ["<leader>`"] = { name = "+terminal" },
+    ["<leader>w"] = {"Toggle Wrap"}, 
+    ["<leader>`"] = { "+terminal" },
     ["<leader>``"] = {"Horizontal Terminal"}, 
     ["<leader>`v"] = {"Vertical Terminal"}, 
+    ["<leader>l"] = { "+Set Language" },
+    ["<leader>lp"] = {"PHP"}, 
+    ["<leader>lh"] = {"HTML"}, 
   })
 
 EOF
