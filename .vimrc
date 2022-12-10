@@ -58,7 +58,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'dbeniamine/cheat.sh-vim'
+" Plug 'dbeniamine/cheat.sh-vim'
 "Plug 'ycm-core/YouCompleteMe'   " Too Complicated, harus Python Cmake, dkk nya
 Plug 'mbbill/undotree'
 Plug 'gruvbox-community/gruvbox'
@@ -73,11 +73,20 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'easymotion/vim-easymotion'
 "Plug 'liuchengxu/vim-which-key'
 Plug 'folke/which-key.nvim'
+"JSDoc
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
+"End JSDoc
 call plug#end()
 
 let g:material_theme_style = 'darker-community'
 
 set timeoutlen=300
+
+"JSdoc
+nmap <silent> <C-l> <Plug>(jsdoc)
 
 "Snipmate Scope
 "Deprecated
