@@ -109,7 +109,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview', 'coc-prettier', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-html','coc-html-css-support','@yaegassy/coc-intelephense','coc-json','coc-tsserver','coc-css','coc-sh','coc-sql','coc-sumneko-lua','coc-yaml','coc-webview', 'coc-prettier', 'coc-vimtex', 'coc-deno']
 
 "COC Trigger with tab and return
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
